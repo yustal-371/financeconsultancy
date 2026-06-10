@@ -28,6 +28,10 @@ Everything is in `index.html`, organised as:
 
 Enquiry form posts to [FormSubmit](https://formsubmit.co/) via `fetch()` for a no-redirect JSON response. Inline success/error messages shown without page reload.
 
+## WhatsApp Widget
+
+A floating WhatsApp button sits in the bottom-right corner. Clicking it opens a panel with five pre-written investment query chips. Each chip opens WhatsApp with a pre-filled message to the configured number.
+
 ## Deployment
 
 Push to `main` → GitHub Actions workflow (`.github/workflows/deploy.yml`) → GitHub Pages.
