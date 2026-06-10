@@ -1354,36 +1354,38 @@
             "I'd like to discuss retirement and long-term wealth planning"
         ];
 
-        var widget = document.getElementById('wa-widget');
-        var bubble = document.getElementById('wa-bubble');
-        var closeBtn = document.getElementById('wa-close-btn');
-        var queriesEl = document.getElementById('wa-queries');
+        document.addEventListener('DOMContentLoaded', function () {
+            var widget = document.getElementById('wa-widget');
+            var bubble = document.getElementById('wa-bubble');
+            var closeBtn = document.getElementById('wa-close-btn');
+            var queriesEl = document.getElementById('wa-queries');
 
-        queries.forEach(function (q) {
-            var btn = document.createElement('button');
-            btn.className = 'wa-chip';
-            btn.textContent = q;
-            btn.addEventListener('click', function () {
-                var url = 'https://wa.me/' + PHONE + '?text=' + encodeURIComponent(q);
-                window.open(url, '_blank');
+            queries.forEach(function (q) {
+                var btn = document.createElement('button');
+                btn.className = 'wa-chip';
+                btn.textContent = q;
+                btn.addEventListener('click', function () {
+                    var url = 'https://wa.me/' + PHONE + '?text=' + encodeURIComponent(q);
+                    window.open(url, '_blank');
+                });
+                queriesEl.appendChild(btn);
             });
-            queriesEl.appendChild(btn);
-        });
 
-        bubble.addEventListener('click', function (e) {
-            e.stopPropagation();
-            widget.classList.toggle('wa-open');
-        });
+            bubble.addEventListener('click', function (e) {
+                e.stopPropagation();
+                widget.classList.toggle('wa-open');
+            });
 
-        closeBtn.addEventListener('click', function (e) {
-            e.stopPropagation();
-            widget.classList.remove('wa-open');
-        });
-
-        document.addEventListener('click', function (e) {
-            if (!widget.contains(e.target)) {
+            closeBtn.addEventListener('click', function (e) {
+                e.stopPropagation();
                 widget.classList.remove('wa-open');
-            }
+            });
+
+            document.addEventListener('click', function (e) {
+                if (!widget.contains(e.target)) {
+                    widget.classList.remove('wa-open');
+                }
+            });
         });
     })();
 </script>
