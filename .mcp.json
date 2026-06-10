@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "/Users/yurik/.nvm/versions/node/v24.16.0/bin/npx",
+      "args": ["-y", "@playwright/mcp@latest"],
+      "env": {
+        "PATH": "/Users/yurik/.nvm/versions/node/v24.16.0/bin:/usr/local/bin:/usr/bin:/bin"
+      }
+    }
+  }
+}

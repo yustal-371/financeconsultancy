@@ -2,6 +2,8 @@
 
 A single-file static landing page for an investment strategy consultancy. The entire site (HTML, CSS, and JavaScript) lives in `index.html` with no build step, no package manager, and no dependencies.
 
+![Site screenshot](screenshot.png)
+
 ## Live Site
 
 Deployed via GitHub Pages on every push to `main`.
